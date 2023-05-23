@@ -76,7 +76,7 @@ body {
 }
 
 .indexNavigationLogo {
-  width: 15%;
+  /* width: 15%; */
   height: auto;
 }
 
@@ -189,6 +189,17 @@ body {
 
 }
 
+.solutions {
+  width: 100%;
+  height: 8vh;
+  position: relative;
+  display: flex;
+  background-color: #FCD658;
+  align-items: center;
+  justify-content: center;
+  font-family: 'daxlinepro-light';
+}
+
 .feedbackcustomerwordsHeading>.aboutus {
   --tw-text-opacity: 1;
   color: rgb(215 179 33 / var(--tw-text-opacity));
@@ -260,7 +271,7 @@ body {
   .feedbackDiv {
     /* margin-top: 5vw; */
     padding-top: 10vw;
-    padding-bottom: 13vw;
+    padding-bottom: 6vw;
   }
 
   .feedbackDiv {

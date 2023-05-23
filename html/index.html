@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./inde  x.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href= "../css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="./fonts/DaxlinePro-Bold.otf">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -18,19 +20,37 @@
 
 <body>
     <!-- navbar -->
-    <div class="navigation">
+    <div class="navigation" id="topNav">
         <div class="innerNav">
-            <img src="./assets/ProcureXpress-Logo.png" alt="" class="indexNavigationLogo nav-logo">
+            <div class="logoContainer">
+                <img src="../assets/ProcureXpress-Logo.png" alt="" class="indexNavigationLogo nav-logo">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            
             <div class="indexnavigationItemsDiv">
-                <a href="./aboutUs.html" class="indexnavigationitem ">About</a>
+                <a href="../html/aboutUs.html" class="indexnavigationitem ">About</a>
                 <a href="#features" class="indexnavigationitem">Features</a>
                 <a href="#blog" class="indexnavigationitem">Blog</a>
                 <a href="#contact" class="indexnavigationitem">Contact</a>
 
             </div>
-            <a href="" class="joinUs">Join us</a>
+            <a href="" class="joinUs">Join us</a>          
         </div>
     </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("topNav");
+            if (x.className === "navigation"){
+                x.className += " responsive ";
+            } else{
+                x.className = "navigation";
+            }
+        }
+    </script>
+
 
     <!-- hero -->
     <div class="heroeSection">
@@ -43,7 +63,7 @@
                     experience. Get a bird-eye view into your spend with a single, easy-to-<br>
                     use platform
                 </h4>
-                <a href="./aboutUs.html" class="freeTrialButton">Learn More</a>
+                <a href="../html/aboutUs.html" class="freeTrialButton">Learn More</a>
             </div>
         </div>
     </div>
@@ -68,16 +88,16 @@
                 savings while saving valuable time when they are purchasing goods and services or <br>
                 even looking for the right information to get their work done. Optimized with features <br>
                 and elements that help you use the software more effectively.</p>
-            <a href="./aboutUs.html" class="learnMore">Learn More</a>
+            <a href="../html/aboutUs.html" class="learnMore">Learn More</a>
         </div>
         <div class=" feedbackAssetDiv">
-            <img src="./assets/happy-client.png" class="feedbackAssetDivImg" id="imageAsset">
-            <iframe width="100%" height="100%" style="border-radius: 10px;" src="https://www.youtube.com/embed/-GRq1xjO3eI?autoplay=1"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+            <img src="../assets/happy-client.png" class="feedbackAssetDivImg" id="imageAsset">
+            <iframe id="introvideo" width="100%" height="100%" style="border-radius: 10px;" src="https://www.youtube.com/embed/-GRq1xjO3eI"
+                title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write;
              encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div id="playButton" onclick="playVideo()">
-                <img src="./assets/play.png" class="play">
-                <img src="./assets/playbtn.png" class="playbtn">
+                <img src="../assets/play.png" class="play">
+                <img src="../assets/playbtn.png" class="playbtn">
             </div>
 
         </div>
@@ -85,20 +105,23 @@
     <script>
         function playVideo() {
             var playBtn = document.getElementById("playButton");
-            var assetImage = document.getElementById("imageAsset")
+            var assetImage = document.getElementById("imageAsset");
+            var vid = document.getElementById("introvideo");
             if (playBtn.style.display === "none") {
                 playBtn.style.display = "block";
                 assetImage.style.display = "block";
+                vid.pause();
             } else {
                 playBtn.style.display = "none";
                 assetImage.style.display = "none";
+                vid.play();
             }
         }
     </script>
     <!-- what we offer -->
     <div class="offerDiv" id="features">
         <div class="offerAssetDiv">
-            <img src="./assets/offer.png" class="offerDivImg" />
+            <img src="../assets/offer.png" class="offerDivImg" />
         </div>
         <div class="offerContent">
             <div class="line"></div>
@@ -108,7 +131,7 @@
                     <div class="topicContainer">
                         <div class="topic">
                             <div>
-                                <img src="./assets/bank.png" class="topicImg">
+                                <img src="../assets/bank.png" class="topicImg">
                             </div>
                             <h3 class="head">COST SAVING</h3>
                         </div>
@@ -124,7 +147,7 @@
                     <div class="topicContainer">
                         <div class="topic">
                             <div>
-                                <img src="./assets/ToDo.png" class="topicImg">
+                                <img src="../assets/ToDo.png" class="topicImg">
                             </div>
                             <h3 class="head">EFFICIENCY</h3>
 
@@ -139,7 +162,7 @@
                     <div class="topicContainer">
                         <div class="topic">
                             <div>
-                                <img src="./assets/transparency.png" class="topicImg">
+                                <img src="../assets/transparency.png" class="topicImg">
                             </div>
                             <h3 class="head">TRANSPARENCY</h3>
 
@@ -154,7 +177,7 @@
                     <div class="topicContainer">
                         <div class="topic">
                             <div>
-                                <img src="./assets/time.png" class="topicImg">
+                                <img src="../assets/time.png" class="topicImg">
                             </div>
                             <h3 class="head">TIME SAVING</h3>
 
@@ -168,7 +191,7 @@
                     <div class="topicContainer">
                         <div class="topic">
                             <div>
-                                <img src="./assets/standardization.png" class="topicImg">
+                                <img src="../assets/standardization.png" class="topicImg">
                             </div>
                             <h3 class="head">STANDARDIZATION</h3>
 
@@ -183,7 +206,7 @@
                     <div class="topicContainer">
                         <div class="topic">
                             <div>
-                                <img src="./assets/track.png" class="topicImg">
+                                <img src="../assets/track.png" class="topicImg">
                             </div>
                             <h3 class="head">TRACKABILITY</h3>
 
@@ -214,7 +237,7 @@
                     <div class="blogContainer">
                         <div class="blogTopic">
                             <div>
-                                <img src="./assets/sale.png" class="blogImg">
+                                <img src="../assets/sale.png" class="blogImg">
                             </div>
                         </div>
                         <div>
@@ -230,7 +253,7 @@
                     <div class="blogContainer">
                         <div class="blogTopic">
                             <div>
-                                <img src="./assets/shake.png" class="blogImg">
+                                <img src="../assets/shake.png" class="blogImg">
                             </div>
                         </div>
                         <div>
@@ -246,7 +269,7 @@
                     <div class="blogContainer">
                         <div class="blogTopic">
                             <div>
-                                <img src="./assets/graph.png" class="blogImg">
+                                <img src="../assets/graph.png" class="blogImg">
                             </div>
                         </div>
                         <div>
@@ -277,7 +300,7 @@
                     <div class="feedContainer">
                         <div class="feedTopic">
                             <div>
-                                <img src="./assets/quote.png" class="feedImg">
+                                <img src="../assets/quote.png" class="feedImg">
                             </div>
                             <h3 class="niceSupport">Nice Support!!!</h3>
                             <p class="feedText">No doubt, Vatebra e-procurement software
@@ -288,7 +311,7 @@
                         </div>
 
                         <div class="guy">
-                            <img src="./assets/guy.png" class="guyPng">
+                            <img src="../assets/guy.png" class="guyPng">
                             <div class="sam">
                                 <h3>Oluwanisola Samuel</h3>
                                 <p>Engineer</p>
@@ -300,7 +323,7 @@
                     <div class="feedContainer">
                         <div class="feedTopic">
                             <div>
-                                <img src="./assets/quote.png" class="feedImg">
+                                <img src="../assets/quote.png" class="feedImg">
                             </div>
                             <h3 class="niceSupport">Excellent Product!!</h3>
                             <p class="feedText">No doubt, Vatebra e-procurement software
@@ -311,7 +334,7 @@
                         </div>
 
                         <div class="guy">
-                            <img src="./assets/guy2.png" class="guyPng">
+                            <img src="../assets/guy2.png" class="guyPng">
                             <div class="sam">
                                 <h3>Abimbola Daniel</h3>
                                 <p>Software Developer</p>
@@ -389,7 +412,7 @@
 
         <div class="copyright">
             <div class="copy">
-                <img src="./assets/copyright.png">
+                <img src="../assets/copyright.png">
                 <p class="copyrightText">Copyright 2022 by Vatebra.com</p>
             </div>
         </div>
